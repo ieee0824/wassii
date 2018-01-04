@@ -1,0 +1,14 @@
+version: '2'
+services:
+    db:
+        ports:
+            - 3306:3306
+        build:
+            context: ./containers/mysql
+            dockerfile: Dockerfile
+    httpd:
+        ports:
+            - 80:80
+        build:
+            context: ./containers/httpd
+            dockerfile: Dockerfile
